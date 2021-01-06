@@ -1,0 +1,82 @@
+<div class="container">
+  <h5>
+    Enviar Arquivos
+    <button class="btn btn-sm btn-danger pull-right" (click)="mostrarUpload = false" *ngIf="mostrarUpload">
+      Voltar
+    </button>
+  </h5>
+  <h6 *ngIf="!mostrarUpload">Seleção de Cliente</h6>
+  <h6 *ngIf="mostrarUpload">Seleção de Arquivo</h6>
+  <hr />
+  <br />
+
+  <div *ngIf="!mostrarUpload">
+    <div class="row">
+      <div class="col-9">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Buscar cliente..."
+          (keyup.enter)="filter(query.value)"
+          #query
+        />
+      </div>
+      <div class="col-3">
+        <button class="btn btn-sm btn-primary" (click)="filter(query.value)">
+          Buscar
+        </button>
+      </div>
+    </div>
+
+    <table
+      class="table table-striped"
+      [mfData]="clientes"
+      #mf="mfDataTable"
+      [mfRowsOnPage]="10"
+      *ngIf="clientes?.length > 0"
+    >
+      <thead>
+        <tr>
+          <th style="width: 15%">
+            <mfDefaultSorter by="idCliente">ID Cliente</mfDefaultSorter>
+          </th>
+          <th style="width: 55%">
+            <mfDefaultSorter by="nomeCliente">Nome</mfDefaultSorter>
+          </th>
+          <th style="width: 15%">
+            <mfDefaultSorter by="arquivosTotal">Arquivos</mfDefaultSorter>
+          </th>
+          <th style="width: 15%"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cliente of mf.data">
+          <td>{{ cliente.idCliente }}</td>
+          <td>{{ cliente.nomeCliente }}</td>
+          <td>{{ cliente.arquivosTotal }}</td>
+          <td class="text-right">
+            <button
+              class="btn btn-sm btn-outline-primary"
+              (click)="selecionarCliente(cliente)"
+            >
+              Selecionar
+            </button>
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="4">
+            <mfBootstrapPaginator
+              [rowsOnPageSet]="[5, 10, 25]"
+            ></mfBootstrapPaginator>
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+
+  <div *ngIf="mostrarUpload">
+    <app-envio [cliente]="clienteSelecionado"></app-envio>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+.dropdown-menu-right {
+  right: 0;
+  left: auto !important;
+}
+
+.navbar-brand {
+  padding-right: 20px;
+  border-right: 2px solid rgba(253, 253, 253, 0.068);
+  margin-right: 10px;
+}
+
+.navbar-nav{
+  margin-left: 15px;
+}
+
+a, .user-menu {
+  font-family: Poppins-Regular;
+  font-size: 18px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+}
+
+a:focus {
+  outline: none!important
+}
+
+.thumbnail {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  float: right;
+  margin-top: -5px;
+  margin-left: 10px;
+  border-radius: 100%;
+  box-shadow: 0 13px 26px rgba(218, 218, 218, 0.2), 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.active-link {
+  color: #eeeeee !important;
+}
+
+li {
+  margin-right: 20px;
+}

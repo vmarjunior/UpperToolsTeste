@@ -1,0 +1,32 @@
+<div class="container file-upload">
+  <div class="progress-container">
+    <p>
+      Upload de arquivos
+      <span style="float: right">{{ progress.percentage }}</span>
+    </p>
+
+    <div class="progress">
+      <div
+        class="progress-bar bg-success"
+        role="progressbar"
+        [ngStyle]="{ width: progress.percentage }"
+        aria-valuemin="0"
+        aria-valuemax="100"
+      ></div>
+    </div>
+    <p>
+      Nome do arquivo: <span style="float: right">{{ fileName }}</span>
+    </p>
+  </div>
+
+  <div (click)="fileInput.click()" class="button-upload text-center">
+    <input
+      style="display: none"
+      type="file"
+      (change)="onFileSelected($event)"
+      #fileInput
+    />
+    <i class="fa fa-upload fa-3x mt-3" aria-hidden="true"></i>
+  </div>
+
+</div>

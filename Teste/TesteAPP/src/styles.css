@@ -1,0 +1,57 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~font-awesome/css/font-awesome.css";
+@import '~ngx-toastr/toastr.css';
+
+@font-face {
+  font-family: Poppins-Regular;
+  src: url('/src/app/assets/fonts/poppins/Poppins-Regular.ttf')
+}
+
+@font-face {
+  font-family: Poppins-Bold;
+  src: url('/src/app/assets/fonts/poppins/Poppins-Bold.ttf')
+}
+
+@font-face {
+  font-family: Poppins-Medium;
+  src: url('/src/app/assets/fonts/poppins/Poppins-Medium.ttf')
+}
+
+@font-face {
+  font-family: Montserrat-Bold;
+  src: url('/src/app/assets/fonts/montserrat/Montserrat-Bold.ttf')
+}
+
+html, body {
+  min-height: 100%;
+  font-family: Poppins-Regular,sans-serif;
+}
+
+body {
+  padding-bottom: 20px;
+  background: #46803b;
+  background: -webkit-linear-gradient(-135deg,#2c3a7e,#46803b);
+  background: -o-linear-gradient(-135deg,#2c3a7e,#46803b);
+  background: -moz-linear-gradient(-135deg,#2c3a7e,#46803b);
+  background: linear-gradient(-135deg,#2c3a7e,#46803b);
+}
+
+.toast-container {
+  margin-top: 70px;
+}
+
+h5 {
+  font-weight: bold;
+  color: rgb(121, 25, 25);
+}
+
+h6 {
+  font-size: 14px;
+  font-weight: bold;
+  color: rgba(141, 0, 0, 0.719);
+}
+
+button:disabled{
+  cursor: not-allowed;
+}

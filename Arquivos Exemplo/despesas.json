@@ -1,0 +1,18 @@
+[
+   {
+      "tipoDespesa": 3,
+      "dataVencimento":"2020-12-23T00:00:00.511Z",
+      "valorCobrado":110,
+      "dataPagamento":"2020-12-28T00:00:00.511Z",
+      "valorPago":125.90,
+      "valorMulta":15.90
+   },
+   {
+      "tipoDespesa": 5,
+      "dataVencimento":"2021-01-23T00:00:00.511Z",
+      "valorCobrado":110,
+      "dataPagamento":"2021-01-28T00:00:00.511Z",
+      "valorPago":110,
+      "valorMulta":0
+   }
+]

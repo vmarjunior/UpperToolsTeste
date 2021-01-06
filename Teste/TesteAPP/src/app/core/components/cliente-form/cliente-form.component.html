@@ -1,0 +1,38 @@
+<div class="container">
+  <h5>
+    Clientes
+    <a routerLink="/cliente" class="btn btn-sm btn-danger pull-right">
+      Voltar
+    </a>
+  </h5>
+  <h6>Cadastro</h6>
+  <hr />
+  <br />
+
+  <form (ngSubmit)="save()">
+    <div class="form-group">
+      <label for="nomeCliente">Nome do Cliente</label>
+      <div class="input-group">
+        <input
+          #nomeCliente="ngModel"
+          [(ngModel)]="cliente.nomeCliente"
+          name="nomeCliente"
+          id="nomeCliente"
+          type="text"
+          class="form-control"
+        />
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-success">Salvar</button>
+
+    <button
+      type="button"
+      class="btn btn-danger"
+      (click)="delete()"
+      *ngIf="cliente.idCliente > 0"
+    >
+      Deletar
+    </button>
+  </form>
+</div>

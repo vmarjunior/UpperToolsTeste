@@ -1,0 +1,8 @@
+O banco de dados está utilizando a conexão por integrated security, caso necessite trocar basta entrar no appsettings.json da API.
+As migrações (database code-first) estão sendo realizadas automaticamente no startup, assim como o primeiro objeto da tabela clientes.
+Infelizmente não consegui restringir a tempo os arquivos a serem enviados, e alguns dados precisam estar em formatos específicos, entendo a necessidade de liberar o programa desta ou demais restrições, mas não conseguiria dar continuidade em tempo hábil.
+O front-end precisa que as bibliotecas do node sejam baixadas com 'npm install', e para rodar o front basta usar com comando do angular cli 'ng serve'.
+O caminho para o acesso ao front é no localhost:4200 e a api está configurada para rodar no localhost:5000 (http) e localhost:5001 (https).
+Também foi liberado os métodos disponíveis no controlador pelo swagger para facilitar a visualização.
+
+Quaisquer outras dúvidas podem me chamar a qualquer momento que ajudarei com prazer.
